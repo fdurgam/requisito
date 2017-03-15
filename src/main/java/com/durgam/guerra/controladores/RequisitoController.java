@@ -33,7 +33,10 @@ public class RequisitoController {
 		return "listaRequisitos";
 	}
 	
-	public String agregarRequisito(@PathVariable("requisito") String requisito, Requisito requisito){
-		
+	@RequestMapping (value="/{listaRequisitos}", method=RequestMethod.POST)
+	public String agregarRequisito(@PathVariable("requisito") String requisitoNuevo, Requisito requisito){
+	//	requisito.setReader(requisitoNuevo);
+		requisitoRepositorio.save(requisito);
+		return "redirect:/{requisito}";
 	}
 }
