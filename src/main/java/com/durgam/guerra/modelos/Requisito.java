@@ -1,4 +1,4 @@
-package com.durgam.guerra;
+package com.durgam.guerra.modelos;
 
 import java.util.Date;
 
@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 
 public class Requisito {
-
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long Id;
@@ -24,5 +24,4 @@ public class Requisito {
 	private String Tipo;
 	private String Prioridad;
 
-	
 }
