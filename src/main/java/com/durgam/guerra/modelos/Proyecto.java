@@ -14,6 +14,16 @@ public class Proyecto {
 	private String nombreProyecto;
 	private String descripcionProyecto;
 	
+	public Proyecto() {
+	}
+	
+	public Proyecto(Long id, String nombreProyecto, String descripcionProyecto) {
+		super();
+		this.id = id;
+		this.nombreProyecto = nombreProyecto;
+		this.descripcionProyecto = descripcionProyecto;
+	}
+	
 	public Long getId() {
 		return id;
 	}
