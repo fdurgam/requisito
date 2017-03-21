@@ -1,9 +1,5 @@
 package com.durgam.guerra.proyecto;
 
-
-
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,15 +12,14 @@ public class Proyecto {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String nombreProyecto;
-	private Date fechaInicioProyecto;
+	private String descripcionProyecto;
 	
 	public Proyecto() {
 	}
 	
-	public Proyecto(String nombreProyecto, Date fechaInicioProyecto) {
+	public Proyecto(String nombreProyecto, String descripcionProyecto) {
 		super();
 		this.nombreProyecto = nombreProyecto;
-		this.fechaInicioProyecto = fechaInicioProyecto;
 	}
 
 	public Long getId() {
@@ -43,14 +38,13 @@ public class Proyecto {
 		this.nombreProyecto = nombreProyecto;
 	}
 
-	public Date getFechaInicioProyecto() {
-		return fechaInicioProyecto;
+
+	public String getDescripcionProyecto() {
+		return descripcionProyecto;
 	}
 
-	public void setFechaInicioProyecto(Date fechaInicioProyecto) {
-		this.fechaInicioProyecto = fechaInicioProyecto;
-	}
-	
-	
+	public void setDescripcionProyecto(String descripcionProyecto) {
+		this.descripcionProyecto = descripcionProyecto;
+	}	
 	
 }
