@@ -1,4 +1,8 @@
-package com.durgam.guerra.modelos;
+package com.durgam.guerra.proyecto;
+
+
+
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,42 +11,46 @@ import javax.persistence.Id;
 
 @Entity
 public class Proyecto {
-
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String nombreProyecto;
-	private String descripcionProyecto;
+	private Date fechaInicioProyecto;
 	
 	public Proyecto() {
 	}
 	
-	public Proyecto(Long id, String nombreProyecto, String descripcionProyecto) {
+	public Proyecto(String nombreProyecto, Date fechaInicioProyecto) {
 		super();
-		this.id = id;
 		this.nombreProyecto = nombreProyecto;
-		this.descripcionProyecto = descripcionProyecto;
+		this.fechaInicioProyecto = fechaInicioProyecto;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNombreProyecto() {
 		return nombreProyecto;
 	}
+
 	public void setNombreProyecto(String nombreProyecto) {
 		this.nombreProyecto = nombreProyecto;
 	}
-	public String getDescripcionProyecto() {
-		return descripcionProyecto;
-	}
-	public void setDescripcionProyecto(String descripcionProyecto) {
-		this.descripcionProyecto = descripcionProyecto;
+
+	public Date getFechaInicioProyecto() {
+		return fechaInicioProyecto;
 	}
 
+	public void setFechaInicioProyecto(Date fechaInicioProyecto) {
+		this.fechaInicioProyecto = fechaInicioProyecto;
+	}
+	
 	
 	
 }
