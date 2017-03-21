@@ -20,6 +20,7 @@ public class Proyecto {
 	public Proyecto(String nombreProyecto, String descripcionProyecto) {
 		super();
 		this.nombreProyecto = nombreProyecto;
+		this.descripcionProyecto = descripcionProyecto;
 	}
 
 	public Long getId() {
